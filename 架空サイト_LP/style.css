@@ -1,0 +1,1819 @@
+@charset "UTF-8";
+
+/* ーーーー */
+/* 共通要素 */
+/* ーーーー */
+
+html{
+  background-color: #fff; /* HTML全体の背景色を白に設定 */
+}
+
+body {
+  font-size: 14px; /* ボディ全体のフォントサイズを14pxに設定 */
+}
+
+*{
+  font-family: Noto Sans Jp, sans-serif; /* 全体のフォントをNoto Sans JPに設定 */
+  box-sizing: border-box; /* ボックスのサイズをborder-boxに設定 */
+  margin: 0; /* 全要素のマージンをリセット */
+  padding: 0; /* 全要素のパディングをリセット */
+}
+
+.range {
+  width: 100%; /* 要素の幅を100%に設定 */
+  max-width: 1024px; /* 最大幅を1024pxに設定 */
+  padding: 0 25px; /* 左右に25pxのパディングを設定 */
+  padding-top: 96px; /* 上に96pxのパディングを設定 */
+  margin: 0 auto; /* 要素を中央に配置 */
+}
+
+.range2 {
+  width: 100%; /* 要素の幅を100%に設定 */
+  max-width: 932px; /* 最大幅を932pxに設定 */
+  padding-top: 96px; /* 上に96pxのパディングを設定 */
+  margin: 0 auto; /* 要素を中央に配置 */
+}
+
+a {
+  color: #007FC6; /* リンクのテキスト色を青に設定 */
+  text-decoration: none; /* リンクの下線を削除 */
+}
+
+.logo img {
+  max-width: 227px; /* 画像の最大幅を227pxに設定 */
+  max-height: 52px; /* 画像の最大高さを52pxに設定 */
+  margin: 26px 0 22px 20px;
+}
+
+.ul{
+  list-style: none; /* リストのスタイルを無効に設定 */
+}
+
+h1{
+  line-height: 150%;
+  font-size: 56px; /* フォントサイズを56pxに設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  color: #fff; /* テキストの色を白に設定 */
+  padding: 12px 0 16px 0;
+}
+
+h2{
+  font-size: 32px; /* 見出しのフォントサイズを32pxに設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  color: #333333; /* テキストの色を濃いグレーに設定 */
+  text-align: center; /* テキストを中央に揃える */
+  display: flex; /* フレックスボックスで配置 */
+  justify-content: center; /* 中央に配置 */
+  align-items: center; /* 垂直方向の中央に揃える */
+  padding-bottom: 50px; /*  */
+}
+
+h3{
+  font-size: 24px; /* サブタイトルのフォントサイズを24pxに設定 */
+  line-height: 43.2px; /* 行の高さを43.2pxに設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  color: #333333; /* テキストの色を濃いグレーに設定 */
+  text-align: center; /* テキストを中央に揃える */
+}
+
+.caresend-1
+{
+  letter-spacing: 0.03em;
+  margin: 0; /* 余白をリセット */
+  padding: 0; /* パディングをリセット */}
+
+.hide{
+  display: block;
+}
+
+.responsive{
+  display: none;
+}
+
+/* ーーーー */
+/* ダウンロードフォーム */
+/* ーーーー */
+
+form {
+  background-color: #fff; /* フォームの背景色を淡い青に設定 */
+  border: 2px solid #6db5e1; /* 外枠を青色で2pxの実線に設定 */
+  border-radius: 5px; /*  */
+  padding: 7px 7px 6px 8px ; /*  */
+  width: 100%; /* 幅を100%に設定 */
+  margin: 0 auto; /* フォームを中央に配置 */
+  font-family: Arial, sans-serif; /* フォントをArialに設定 */
+}
+
+.caution{
+  color: red;
+}
+
+.form__title  {
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  text-align: center;
+  background-color: #007FC6;
+  font-size: 20px;
+  font-weight: normal;
+  width: 100%;
+  height: 52px;
+  color: #fff;
+  border-radius: 5px;
+  white-space: nowrap;
+  position: relative;
+  padding: 16px 15px 16px 14px;
+}
+
+.form__title .responsive{
+  display: none; 
+}
+
+.form__title::before {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 17px 10px 0 10px;
+  border-style: solid;
+  border-color: #007FC6 transparent transparent transparent;
+}
+
+.form__field{
+  margin-top: 8px;
+  padding: 0 7px 0 8px;
+}
+
+.main__entry .name__field {
+  display: flex; /* フレックスボックスで配置 */
+  justify-content: space-between; /* 要素間を均等に配置 */
+
+
+}
+
+.main__entry .name__field > div {
+  flex: 1; /* 子要素が均等に横幅を取るよう設定 */
+}
+
+.main__entry .name__field > div:first-child {
+  margin-right: 9px; /* 左側の要素の右に9pxの余白を設定 */
+}
+
+.main__entry .name__field > div:last-child {
+  margin-left: 9px; /* 右側の要素の左に9pxの余白を設定 */
+}
+
+.main__entry label {
+  display: block; /* ラベルをブロック要素に設定 */
+  margin-top: 12px;
+
+  font-weight: bold; /* フォントを太字に設定 */
+  color: #333; /* テキストの色を濃いグレーに設定 */
+}
+
+.main__entry input[type="text"],
+.main__entry input[type="email"],
+.main__entry input[type="tel"] {
+  font-size: 16px;
+  background-color: #F5F8FA;
+  height: 48px;
+  width: 100%;
+  margin-top: 5px;
+  padding: 12px 0 12px 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.main__entry .name__field label {
+  width: 48%; /* ラベルの幅を48%に設定 */
+}
+
+.main__entry .name__field input[type="text"] {
+  width: 100%; /* 入力フィールドの幅を100%に設定 */
+  border: 1px solid #ccc; /* 外枠を灰色で1pxの実線に設定 */
+  border-radius: 5px; /* 外枠の角を丸めて5pxに設定 */
+  box-sizing: border-box; /* ボックスのサイズをborder-boxに設定 */
+}
+
+.main__entry input[type="text"]::placeholder,
+.main__entry input[type="email"]::placeholder,
+.main__entry input[type="tel"]::placeholder {
+  color: #ccc; /* プレースホルダーのテキスト色を淡い灰色に設定 */
+}
+
+.main__entry .privacy-note {
+  font-size: 14px; /*  */
+  color: #666; /* テキストの色を濃い灰色に設定 */
+  margin-top: 25px;
+}
+
+.main__entry button {
+  width: 100%; /* ボタンの幅を100%に設定 */
+  max-width: 320px; /* ボタンの最大幅を320pxに設定 */
+  background-color: #007FC6; /* ボタンの背景色を青に設定 */
+  color: #fff; /* ボタンのテキスト色を白に設定 */
+  border: none; /* ボタンの外枠を削除 */
+  border-radius: 28px; /* ボタンの角を丸めて28pxに設定 */
+  font-size: 20px; /* フォントサイズを20pxに設定 */
+  cursor: pointer; /* カーソルをポインターに変更 */
+  padding: 12px 20px 11px; /*  */
+  margin: 32px auto 20px auto; /* 上下に28pxのマージンを設定し、中央揃え */
+  display: block; /* ボタンをブロック要素に設定して中央揃え */
+}
+
+.main__entry button:hover {
+  background-color: #007FC6; /* ボタンの背景色を青に設定（ホバー時） */
+}
+
+/* ーーーー */
+/* ハンバーガーメニュー */
+/* ーーーー */
+
+.menu-container {
+  display: none;
+  justify-content: center; /* Center the hamburger menu horizontally */
+  align-items: center; /* Center the hamburger menu vertically */
+}
+
+.hamburger {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  flex-direction: column; /* Stack the lines vertically */
+  justify-content: center; /* Center the lines vertically */
+  align-items: center; /* Center the lines horizontally */
+  background-color: #333; /* Background color as seen in the image */
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger span {
+  position: absolute;
+  background: #fff; /* White color for the bars */
+  border-radius: .125rem;
+  display: block;
+  height: 1px; /* Thickness of the bars */
+  width: 32px; /* Width of the bars */
+  margin-top: -2px;
+  transition: all 0.4s; /* Animation transition */
+}
+
+.hamburger p {
+  color: #fff; /* White color for the text */
+  font-size: 10px; /* Adjust font size for better visibility */
+  text-align: center;
+  margin-top: 25px;
+}
+
+.hamburger span:nth-of-type(1) {
+  top: 23%;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 37%;
+}
+
+.hamburger span:nth-of-type(3) {
+  top: 51%;
+}
+
+.hamburger._emergent span{
+  margin:0;
+
+}
+
+/* clickedクラスが付与されると線が回転して×に */
+.hamburger._emergent span:nth-of-type(1) {
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hamburger._emergent span:nth-of-type(2) {
+  opacity: 0; /*真ん中の線は透過*/
+}
+
+.hamburger._emergent span:nth-of-type(3) {
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* メニューのスタイル */
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0; /* 左端に揃える */
+  width: 100%; /* ヘッダーの横幅に合わせる */
+  color: #fff;
+  background-color: #007FC6;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1; /* ハンバーガーアイコンの下に表示されるようにする */
+}
+
+
+/* メニュー表示時のスタイル */
+.menu._emergent {
+  transform: translateY(0);
+  margin-top: 64px;
+}
+
+/* メニューのリスト項目のスタイル */
+.menu a {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 24px 16px;
+  margin: 0;
+  text-align: left; /* メニュー項目を左に配置 */
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid #fff; /* 各項目の下にボーダーを表示 */
+}
+
+.menu a :last-child {
+  font-size: 16px;
+  border-bottom: none;
+}
+
+.menu p{
+  margin-top: -3px;
+}
+
+.menu li img {
+  width: 24px; /*  */
+  height: 24px; /*  */
+  margin-right: 7px; /* 画像とテキストの間に7pxのマージンを追加 */
+}
+
+
+
+/* ーーーー */
+/* header */
+/* ヘッダー */
+/* ーーーー */
+
+header {
+  height: inherit; /* 親要素の高さに揃える */
+  display: flex; /* フレックスボックスで配置 */
+  align-items: center; /* 垂直方向の中央に揃える */
+  justify-content: space-between;
+}
+
+.header__symbol {
+  max-height: 96px;
+  display: flex; /* フレックスボックスで配置 */
+  justify-content: center;
+  align-items: center; /* 垂直方向の中央に揃える */
+}
+
+.header__menu {
+  font-size: 16px;
+  max-width: 568px;
+  height: 96px;/* aタグをヘッダーの高さいっぱいにするため */
+  font-weight: bold;
+  margin-right: 58px;
+  display: flex; /* メニュー項目を横並びにする */
+  align-items: center; /* 垂直方向の中央に揃える */
+  }
+
+.header__menu ul {
+  display: flex; /* リスト項目を横並びにする */
+  height: 100%;
+  align-items: center; /* 垂直方向の中央に揃える */
+  gap: 28.45px;
+}
+
+.header__menu li {
+  display: flex; /* リスト項目を横並びにする */
+  height: 100%;
+  align-items: center; /* 垂直方向の中央に揃える */
+}
+
+.header__menu li a {
+  display: flex; /* リスト項目を横並びにする */
+  height: 100%;
+  align-items: center; /* 垂直方向の中央に揃える */
+}
+
+.header__info {
+  margin-left: 0; /* 左側の余白を削除 */
+  flex-shrink: 0; /* フレックスアイテムの縮小を防ぐ */
+  display: flex; /* フレックスボックスで配置 */
+  align-items: center; /* 垂直方向の中央に揃える */
+  width: 100%; /* 幅を100%に設定 */
+  max-width: 189px; /* リンクボタンの最大幅を189pxに設定 */
+  height: 100%; /* 高さを100%に設定 */
+  padding: 32px 43px; /* 上下に32px、左右に43pxのパディングを設定 */
+  background-color: #007FC6; /* 背景色を青に設定 */
+  text-align: center; /* テキストを中央に揃える */
+  color: #fff; /* テキストの色を白に設定 */
+  font-size: 16px; /* フォントサイズを16pxに設定 */
+}
+
+.header__box{
+  display: flex; /* フレックスボックスで配置 */
+}
+
+.header__info a {
+  display: flex; /* フレックスボックスで配置 */
+  align-items: center; /* 垂直方向の中央に揃える */
+  color: #fff; /* リンクのテキスト色を白に設定 */
+}
+
+.header__info img {
+  width: 32px; /* 画像の幅を32pxに設定 */
+  height: 32px; /* 画像の高さを32pxに設定 */
+  margin-right: 7px; /* 画像とテキストの間に7pxのマージンを追加 */
+}
+
+/* ーーーーーーーー */
+/* main */
+/* ファーストビュー */
+/* ーーーーーーーー */
+
+.main{
+  height: 754px; /* 高さを754pxに設定 */
+  object-fit: cover; /* 画像がオブジェクトのサイズに合わせて表示されるように設定 */
+  background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%); /* 背景を青のグラデーションに設定 */
+  position: relative; /* 相対位置に配置 */
+}
+
+.main__inner{
+  transform: translateX(12px);/* 相対位置に設定する画像の位置まで変化するため */
+  display: flex; /*  */
+  align-items: flex-start; /*  */
+  max-width: 1176px; /*  */
+  padding: 84px 0px 0 0px;
+}
+
+/* ダウンロードフォームがはみ出ない対策 */
+@media (max-width: 1236px) {
+  .main__inner {
+    transform: none;
+    padding: 84px 30px 0 30px;
+  }
+}
+
+.main__area{
+  width: 100%; /* 幅を100%に設定 */
+}
+
+.main-sub-1,
+.main-sub-2{
+  font-size: 20px; /* フォントサイズを20pxに設定 */
+  color: #fff; /* テキストの色を白に設定 */
+  font-weight: lighter; /* フォントの太さをlighterに設定 */
+}
+
+.area__circle {
+  display: flex; /* フレックスボックスで配置 */
+  column-gap: 23px; /*  */
+  padding: 37px 0 20px 5px;
+}
+
+.circle__entry {
+  display: flex; /* フレックスボックスで配置 */
+  gap: 14px;
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  justify-content: center; /* 子要素を中央に配置 */
+  width: 163px; /*  */
+  height: 163px; /*  */
+  border-radius: 50%; /* 要素を円形に設定 */
+  background-color: #ffffff; /* 背景色を白に設定 */
+  text-align: center; /* テキストを中央に揃える */
+  
+}
+
+.circle__title {
+  font-size: 24px; /* フォントサイズを24pxに設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  color: #007FC6; /* テキストの色を青に設定 */
+}
+
+.circle__main {
+  font-size: 28px;
+  font-weight: bold;
+  color: #007FC6;
+  display: flex;
+  justify-content: center;
+  align-items: baseline; /* ベースラインで揃える */
+}
+
+.medium{
+  font-size: 24px;
+}
+
+.small {
+  font-size: 13px; /* フォントサイズを12pxに設定 */
+  color: #888888; /* テキストの色を灰色に設定 */
+  vertical-align: super; /* 上付き文字にする場合 */
+  align-self: flex-start; /* 上に揃える */
+  margin-top: 4px; /* ここで高さを下げる */
+}
+
+.circle__entry:nth-of-type(3) .circle__main {
+  position: relative;
+}
+
+.circle__entry:nth-of-type(3) .circle__main .small {
+  position: absolute;
+  right: 24px; /* Align to the right */
+}
+
+.main__area__note{
+  font-size: 12.2px; /* フォントサイズを12pxに設定 */
+  line-height: 18px;
+  font-weight: lighter;
+  color: #fff; /* テキストの色を白に設定 */
+  padding-top: 7px; /* 上に7pxのパディングを設定 */
+}
+
+.main__inner img{
+  aspect-ratio: 360/201;
+  max-width: 360px; /* 画像の幅を360pxに設定 */
+  position: absolute; /* 絶対位置に配置 */
+  top: 552px;
+  left: 396px;
+}
+
+@media screen and (max-width: 1140px) {
+  .main__inner img {
+  display: none;
+  }
+}
+
+/* ーー */
+/* achievement */
+/* 多くのお客様に選ばれ続けています */
+/* ーー */
+
+.achievement{
+  width: 100%; /* 幅を100%に設定 */
+}
+
+.achievement__main {
+  padding-top: 73px; /* 上に73pxのパディングを設定 */
+}
+
+.achievement__top {
+  padding-bottom: 33px; /*  */
+}
+
+.achievement__image{
+  display: flex; /* フレックスボックスで配置 */
+  column-gap: 84px; /* 要素間に84pxの間隔を設定 */
+  justify-content: center;
+  margin-bottom: 66px; 
+}
+
+.achievement__image img{
+  width: 428px; /* 画像の幅を428pxに設定 */
+  height: 146px; /* 画像の高さを146pxに設定 */
+}
+
+.achievement__other {
+  overflow: hidden; /* はみ出た部分を非表示 */
+}
+
+.achievement__logos {
+  display: flex; /* フレックスボックスで配置 */
+  column-gap: 80px; /* 要素間に80pxの間隔を設定 */
+  justify-content: center; /* 要素を中央に揃える */
+  width: 200%; /* 幅を200%に設定 */
+  animation: scroll 20s linear infinite; /* スクロールアニメーションを追加 */
+}
+
+.achievement__logos img{
+  width: 248px; /* 画像の幅を248pxに設定 */
+  height: 99px; /* 画像の高さを99pxに設定 */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ーー */
+/* about */
+/* CareSendについて */
+/* ーー */
+
+.about__inner {
+  display: flex; /* フレックスボックスで配置 */
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: center; /* 子要素を中央に揃える */
+}
+
+.about__text{
+  margin-bottom: 34px; /*  */
+  max-width: 592px; /* 最大幅を592pxに設定 */
+}
+
+.about__text span{
+  font-size: 32px; /* フォントサイズを32pxに設定 */
+  color: #007FC6; /* テキストの色を青に設定 */
+  line-height: 68px; /*  */
+}
+
+.about__text p {
+  line-height: 25px; /* ここでline-heightを設定 */
+}
+
+.about__image {
+  height: 316px; /* 高さを316pxに設定 */
+  position: relative; /* 相対位置に配置 */
+}
+
+.about__image::before {
+  content: ""; /* 擬似要素を追加 */
+  position: absolute; /* 絶対位置に配置 */
+  top: 20px; /* 上に20pxの位置を設定 */
+  left: -123px; /* 左に123pxの位置を設定 */
+  right: -123px; /* 右に123pxの位置を設定 */
+  bottom: 20px; /* 下に20pxの位置を設定 */
+  background: #F9F9F9; /* 背景色を淡いグレーに設定 */
+  z-index: -1; /* 背景をテキストの背後に配置 */
+}
+
+.about__image img {
+  width: 100%; /* 画像の幅を100%に設定 */
+  height: 100%; /* 画像の高さを100%に設定 */
+}
+
+.about__image_sp{
+  display: none; /* デフォルトで非表示に設定 */
+  background: #F9F9F9; /* 背景色を淡いグレーに設定 */
+  max-width: 315px;
+  max-height: 648px;
+  position: relative;
+}
+
+.about__image_sp::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -13px;
+  right: -13px;
+  bottom: 0px;
+  background: #F9F9F9;
+  z-index: -1;
+}
+
+.about__image_sp img {
+  width: 100%; /* 画像の幅を100%に設定 */
+  height: 100%; /* 画像の高さを100%に設定 */
+}
+
+/* ーー */
+/* feature */
+/* CareSendの特徴 */
+/* ーー */
+
+
+.feature__inner{
+  padding-top: 98px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 31px;
+}
+
+.feature__top{
+  padding-bottom: 51px;
+}
+
+.feature__flex{
+  display: grid; /* グリッドレイアウトを使用 */
+  max-width: 984px;
+  grid-template-columns: 1fr 1fr; /* 2列のグリッドに設定 */
+  gap: 24px; /* 要素間に24pxの間隔を設定 */
+  justify-content: space-between; /* 要素を左右に均等に配置 */
+}
+
+.index__flex__box{
+  max-width: 480px;
+  min-height: 325px; /* 最大高さを325pxに設定 */
+  display: flex; /* フレックスボックスで配置 */
+  padding: 13px; /*  */
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: center; /* 子要素を中央に揃える */
+  border: 1px solid #007FC6; /* 外枠を青色で1pxの実線に設定 */
+}
+
+.box__title{
+  font-size: 20px; /* フォントサイズを20pxに設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  text-align: center;
+  color: #F47500; /* テキストの色をオレンジに設定 */
+  padding: 19px 0 18px 0; 
+}
+
+
+.box__text__index{
+  font-size: 16px; /* フォントサイズを16pxに設定 */
+  padding: 0 18px; /* 左右に18pxのパディングを設定 */
+  line-height: 180%; /* 行の高さを180%に設定 */
+}
+
+.index__flex__box img{
+  width: 116px; /* 画像の幅を116pxに設定 */
+  max-height: 77px; /* 画像の高さを77pxに設定 */
+}
+
+  /* ーーーー */
+  /* caregiver */
+  /*介護士の登録情報の閲覧 */
+  /* ーーーー */
+
+
+.caregiver{
+  width: auto; /* 幅を自動調整に設定 */
+  background-image: url(./img/background-4876988_1280\ 1.png); /* 背景画像を設定 */
+  background-size: cover; /* 画像サイズをカバーに設定 */
+  background-position: center; /* 画像の位置を中央に設定 */
+  background-repeat: no-repeat; /* 画像の繰り返しを無効に設定 */
+  padding: 60px 0; /* 上下に60pxのパディングを設定 */
+}
+
+.caregiver__title{
+  color: #fff; /* テキストの色を白に設定 */
+  font-weight: normal; /* フォントウェイトを通常に設定 */
+  padding-bottom: 24px; /* 下に24pxのパディングを設定 */
+}
+
+.caregiver__materials{
+  position: relative; /* 相対位置に配置 */
+  align-items: center; /* 子要素を中央に揃える */
+  text-align: center; /* テキストを中央に揃える */
+}
+
+.caregiver__materials a {
+  color: #007FC6; /* リンクのテキスト色を青に設定 */
+  background-color: #fff; /* 背景色を白に設定 */
+  font-size: 20px; /* フォントサイズを20pxに設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  padding: 12px 50px 11px; /*  */
+  display: inline-block; /* パディングを適用するためにインラインブロックに設定 */
+  border-radius: 50px; /* 要素の角を丸めて50pxに設定 */
+}
+
+/* ーー */
+/* case */
+/* 導入事例 */
+/* ーー */
+
+.case__inner{
+  padding: 98px 0 34px 0; /* 上に96px、下に55pxのパディングを設定 */
+}
+
+.splide__track{
+  padding: 22px 0 22px; /*  */
+  display: flex; /* フレックスボックスで配置 */
+  max-width: 1024px;
+}
+
+
+
+.splide__list{
+  display: flex; /* ボックスを横並びにする */
+}
+
+.splide__list img{
+  height: 64px; /* 画像の高さを64pxに設定 */
+}
+
+.case__index__box {
+  max-width: 405px; /* 最大幅を405pxに設定 */
+  max-height: 488px;
+  border: solid 1px #fff; /* 白色で1pxの実線ボーダーを設定 */
+  box-shadow: 0px 5px 8px 3px #33333340; /* ボックスシャドウを設定 */
+  padding: 20px 19px 20px 20px;; /*  */
+  border-top-left-radius: 30px; /* 左上の角を30px丸める */
+  border-bottom-right-radius: 30px; /* 右下の角を30px丸める */
+  margin-right: 0; /* デフォルトでは右のマージンを0にしておく */
+}
+
+/* 奇数のボックスに 70px のマージンを設定 */
+.case__index__box:nth-child(odd) {
+  margin-right: 70px;
+}
+
+/* 偶数のボックスに 90px のマージンを設定 */
+.case__index__box:nth-child(even) {
+  margin-right: 142px;
+}
+
+.case__index__box:last-child {
+  margin-right: 0; /* 最後のボックスのマージンは必要ないので0に設定 */
+}
+
+.box__content {
+  display: flex; /* フレックスボックスで配置 */
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: flex-start; /* 子要素を左揃えに設定 */
+  width: 100%; /* 幅を100%に設定 */
+}
+
+.box__top {
+  margin-top: 12px; /*  */
+  width: 100%; /* 幅を100%に設定 */
+  text-align: left; /* テキストを左揃えに設定 */
+}
+
+.top__main{
+  color: #007FC6; /* テキストの色を青に設定 */
+}
+
+.box__text__case {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25.2px;
+  text-align: left;
+  margin: 24px 0 36px 0; /*  */
+}
+
+.controls {
+  display: flex; /* フレックスボックスで配置 */
+}
+
+.controls button{
+  color: #fff; /* ボタンのテキスト色を白に設定 */
+  background-color: #007FC6; /* ボタンの背景色を青に設定 */
+  border-radius: 50%; /* ボタンを円形に設定 */
+  cursor: pointer; /* カーソルをポインターに変更 */
+  width: 34px; /* 幅を34pxに設定 */
+  height: 34px; /* 高さを34pxに設定 */
+  border: none; /* ボタンの外枠を削除 */
+}
+
+.splide__arrow{
+  opacity: 1 !important;
+}
+
+.splide__arrow--prev {
+  left: 1.2vw !important;
+}
+
+.splide__arrow--next {
+  right: 1.2vw !important;
+}
+
+/* ーー */
+/* commission */
+/* 料金は成約手数料のみ */
+/* ーー */
+
+.commission{
+  background: #F9F9F9; /* 背景色を淡いグレーに設定 */
+}
+
+.commission__inner{
+  padding-top: 89px;
+  padding-bottom: 50px;
+  max-width: 912px;
+}
+
+.commission__top{
+  padding-bottom: 62px; 
+}
+
+.commission__pattern{
+  max-height: 277px;
+  margin: 0 auto;
+  display: flex; /* フレックスボックスで配置 */
+  gap: 12px; /* 要素間に12pxの間隔を設定 */
+  justify-content: space-between; /* 子要素を左右に均等に配置 */
+}
+
+.pattern__box{
+  padding-top: 22px; /*  */
+  padding-bottom: 90px; /* 下に90pxのパディングを設定 */
+  width: 100%; /* 幅を100%に設定 */
+  max-width: 296px; /* 最大幅を296pxに設定 */
+  border: none; /* ボックスの外枠を削除 */
+  border-radius: 5px; /* ボックスの角を丸めて5pxに設定 */
+  border-top: 12px solid #007FC6; /* 上部に12pxの青色ボーダーを設定 */
+  background-color: #fff; /* 背景色を白に設定 */
+  box-shadow: 0px 4px 4px 0px #33333340; /* ボックスシャドウを設定 */
+}
+
+.pattern__box__top{
+  padding-bottom: 14px;
+  white-space: nowrap; /* テキストを1行で表示 */
+}
+
+.pattern__box__text{
+  display: flex; /* フレックスボックスで配置 */
+  justify-content: center; /* 子要素を中央に揃える */
+
+}
+
+.pattern__amount {
+  font-size: 96px; /* フォントサイズを96pxに設定 */
+  color: #007FC6; /* テキストの色を青に設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  line-height: 1; /* 行の高さを1に設定 */
+}
+
+.pattern__price {
+  transform: translateY(3px); /* flex-endで下揃えがあるため。 */
+  font-size: 32px; /* フォントサイズを32pxに設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  align-self: flex-end; /* 垂直方向の最後に揃える */
+}
+
+.commission__text{
+  margin-top: 49px; /*  */
+  font-weight: normal;
+  margin-left: 14px;
+}
+
+.commission__text ul{
+  padding: 0; /* パディングをリセット */
+  line-height: 25.2px; 
+}
+
+.commission__text ul li::marker {
+  font-size: 7px;
+}
+
+.commission__text ul li:last-child::marker {
+  content: none; /* マーカーを消す */
+}
+
+.commission__text ul li:last-child {
+  margin-left: -14px;
+}
+
+/* ーー */
+/* faq */
+/* よくある質問 */
+/* ーー */
+
+.faq{
+  background: #F9F9F9; /* 背景色を淡いグレーに設定 */
+}
+
+.faq__inner{
+  padding: 0;
+  padding:95px 0 72px 0;
+}
+
+.faq__top{
+  padding-bottom: 63px; /*  */
+}
+
+.faq__list{
+  display: block; /* リストをブロック要素に設定 */
+}
+
+.faq__box{
+  margin-bottom: 24px; /* 下に24pxのマージンを設定 */
+  border: solid 1px #000; /* 黒色で1pxの実線ボーダーを設定 */
+  border: none; /* ボーダーを削除 */
+  border-radius: 10px; /* ボックスの角を丸めて10pxに設定 */
+  background-color: #fff; /* 背景色を白に設定 */
+}
+
+.faq__box:last-child {
+  margin-bottom: 0; /* 最後の要素のマージンを削除 */
+}
+
+.faq__question{
+  max-height: 80px;
+  display: flex; /* フレックスボックスで配置 */
+  align-items: center; /* 垂直方向の中央に揃える */
+  justify-content: space-between; /* 子要素を左右に均等に配置 */
+  padding: 0 24px 0 36px; /* 左右にパディングを設定 */
+}
+
+.left-element{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.faq__question._emergent{
+  display: flex; /* フレックスボックスで配置 */
+  align-items: center; /* 垂直方向の中央に揃える */
+  justify-content: space-between; /* 子要素を左右に均等に配置 */
+  background-color: #007FC6; /* 背景色を青に設定 */
+  border-top-left-radius: 10px; /* 左上の角を10px丸める */
+  border-top-right-radius: 10px; /* 右上の角を10px丸める */
+}
+
+.faq__answer {
+  display: none; /* デフォルトで非表示に設定 */
+  font-size: 16px; /* フォントサイズを16pxに設定 */
+  line-height: 180%;
+  padding: 24px 36px;
+  border-bottom-left-radius: 10px; /* 左下の角を10px丸める */
+  border-bottom-right-radius: 10px; /* 右下の角を10px丸める */
+  background-color: #fff; /* 背景色を白に設定 */
+}
+
+.faq__answer._emergent {
+  display: block; /* 表示状態に変更 */
+}
+
+.faq__answer ol{
+  margin-left: 16px;
+}
+
+.question__btn span{
+  background: #000; /* White color for the bars */
+  border-radius: .125rem;
+  letter-spacing: normal;
+  display: block; 
+  width: 32px;
+  height: 1.5px;
+}
+
+.question__btn_minus span{
+  background: #fff; /* White color for the bars */
+}
+
+.question__btn span:nth-child(2) {
+  transform: translateY(-50%) rotate(90deg); /* 縦棒にする */
+}
+
+.question__btn_plus._emergent{
+  display: none; /* 非表示に設定 */
+}
+
+.question__btn_minus{
+  display: none; /* 非表示に設定 */
+}
+
+.question__btn_minus._emergent {
+  display: block; /* 表示状態に変更 */
+}
+
+.question__mark{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  font-family: goldman,sans-serif;
+  font-size: 32px;
+  padding: 0 9px;
+  text-align: center;
+  color: #fff;
+  background-color: #007FC6;
+  border-radius: 50%;
+  border: none;
+}
+
+.question__mark._emergent{
+  color: #007FC6; /* テキストの色を青に設定 */
+  background-color: #fff; /* 背景色を白に設定 */
+}
+
+.question__text{
+  font-size: 16px; /* フォントサイズを16pxに設定 */
+  font-weight: bold; /* フォントを太字に設定 */
+  margin: 32px 0; /* 上下に32pxのマージンを設定 */
+}
+
+.question__text._emergent{
+  color: #fff; /* テキストの色を白に設定 */
+}
+
+/* ーー */
+/* download */
+/* 介護派遣に関する資料を無料でダウンロード */
+/* ーー */
+
+.download{
+  background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%); /* 背景を青のグラデーションに設定 */
+}
+
+.download__inner{
+  display: block; /* ブロック要素に設定 */
+  padding: 90px 0 61px 0;
+}
+
+.download__main__area{
+  display: flex; /* フレックスボックスで配置 */
+  column-gap: 35px; /* 要素間に35pxの間隔を設定 */
+  padding: 0 42px; /* 左右に42pxのパディングを設定 */
+}
+
+.download__top{
+  color: #fff; /* テキストの色を白に設定 */
+  padding-bottom: 68px;
+}
+
+.download__site {
+  position: relative; /* 相対位置に配置 */
+  width: 100%; /* 幅を100%に設定 */
+  margin: 0 auto; /* 要素を中央に配置 */
+  border-radius: 8px; /* 角を8px丸める */
+  margin-top: 36px; /*  */
+}
+
+/* テキスト部分のスタイル */
+.site__text {
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 180%;
+  color: #fff;
+  margin-bottom: 48px;
+  text-align: left; /* Ensure the text is left-aligned */
+}
+
+/* 親要素の設定 */
+.site__image {
+  max-width: 500px; /* 最大幅を500pxに設定 */
+  height: auto; /* 高さを自動調整に設定 */
+  text-align: right;
+}
+
+/* 1枚目の画像の設定 */
+.image1 {
+  position: relative;
+  transform: translateX(4px); /* margin leftで反応しなかったため */
+  max-width: 297px;
+  max-height: 175px;
+  height: auto;
+}
+
+/* 2枚目の画像の設定 */
+.image2 {
+  position: absolute;
+  top: 206px;
+  right: 91px;
+  max-width: 330px;
+  height: auto;
+}
+
+/* 2枚目の画像の設定 */
+.image3 {
+  display: none;
+  max-width: 240px;
+  max-height: 149px;
+}
+
+/* ーー */
+/* footer */
+/* フッター */
+/* ーー */
+
+footer{
+  width: 100%; /* 幅を100%に設定 */
+  height: 145px; /* 高さを145pxに設定 */
+  display: flex; /* フレックスボックスで配置 */
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: center; /* 子要素を中央に揃える */
+  margin: auto; /* 要素を中央に配置 */
+}
+
+.footer__symbol.logo{
+  margin-top: 26px;
+}
+
+.footer__symbol.logo img {
+  max-width: 227px;
+  max-height: 52px;
+  margin:0;
+}
+
+.footer__text{
+  font-family: Goldman,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  margin-top: 34px;
+}
+
+/* ーー */
+/* ディスプレイ対応 */
+/* ーー */
+
+@media screen and (max-width: 1080px) {
+
+  /* 1080からh1が改行され始めるため。 */
+
+  /* フォントサイズをビューポート幅に基づいて調整 */
+  /* font-size: 9vw; ビューポート幅の9%に基づいたフォントサイズ */
+  /* =デザインカンプ：36px */
+  /* font-size: 6vw; ビューポート幅の6%に基づいたフォントサイズ */
+  /* =デザインカンプ：24px */
+  /* font-size: 5vw; ビューポート幅の5%に基づいたフォントサイズ */
+  /* =デザインカンプ：20px */
+  /* font-size: 3.5vw; ビューポート幅の3.5%に基づいたフォントサイズ */
+  /* =デザインカンプ：14px */
+  /* font-size: 3vw; ビューポート幅の3%に基づいたフォントサイズ */
+  /* =デザインカンプ：12px */
+
+  *{
+    font-size: 3.5vw;
+  }
+
+
+  .range {
+    padding: 0; /* パディングをリセット */
+    padding-top: 72px; /* 上に72pxのパディングを設定 */
+    padding-left: 16px; /* 左に16pxのパディングを設定 */
+    padding-right: 16px; /* 右に16pxのパディングを設定 */
+  }
+
+  .range2 {
+    padding: 0; /* パディングをリセット */
+    padding-top: 72px; /* 上に72pxのパディングを設定 */
+    padding-left: 16px; /* 左に16pxのパディングを設定 */
+    padding-right: 16px; /* 右に16pxのパディングを設定 */
+  }
+
+  h1 {
+    font-size: 6.4vw; /*  */
+    font-weight: bold; /* フォントを太字に設定 */
+    color: #fff; /* テキストの色を白に設定 */
+    padding: 18px 0 25px 0; /*  */
+    text-align: left;
+    line-height: 11.5vw;
+  }
+
+  h2{
+    font-size: clamp(10px, 6.5vw, 32px); /* 最小Xpx、最大Cpx、理想Bvw */
+  }
+
+  h3{
+    font-size: 5vw; /* ビューポート幅の5%に基づいたフォントサイズに設定 */
+    font-size: clamp(10px, 5vw, 20px); /* 最小Xpx、最大Cpx、理想Bvw */
+    line-height: 9vw; /* ビューポート幅の9%に基づいた行の高さに設定 */
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .responsive{
+    display: block;
+  }
+
+  /* ーーーー */
+  /* ヘッダー */
+  /* ーーーー */
+
+  .header{
+    max-height: 64px; /* 最大高さを64pxに設定 */
+  }
+
+  .header__menu {
+    display: none; /* デフォルトで非表示に設定 */
+  }
+
+  .header__symbol {
+    height: 100%;
+    padding-left: 16px;
+  }
+
+  .header__symbol a{
+    max-width: 139px; /* 最大幅を139pxに設定 */
+  }
+
+  .header__symbol img{
+    width: 100%; /* 幅を100%に設定 */
+    height: 100%; /* 高さを100%に設定 */
+    margin: 0; /* マージンをリセット */
+  }
+
+  .header__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+    padding: 13px 12px; /* 上下に13px、左右に12pxのパディングを設定 */
+    max-width: 64px; /* 最大幅を64pxに設定 */
+    max-height: 64px; /* 最大高さを64pxに設定 */
+  }
+
+  .header__info a{
+    font-size: 10px; /* フォントサイズを10pxに設定 */
+    font-weight: lighter;
+  }
+
+  .header__info img{
+    max-width: 24px; /* 最大幅を24pxに設定 */
+    max-height: 24px; /* 最大高さを24pxに設定 */
+    margin: 0; /* マージンをリセット */
+  }
+
+  .header__menu {
+    display: none;
+    }
+
+  .menu-container {
+    display: block; /* 表示状態に設定 */
+    text-align: center; /* テキストを中央に揃える */
+  }
+
+  /* ーーーー */
+  /* main */
+  /* ーーーー */
+
+  .main {
+    height: 100%; /* 高さを100%に設定 */
+    display: block; /* ブロック要素に設定 */
+  }
+
+  .main__inner{
+    display: block; /* ブロック要素に設定 */
+    transform: none; /* translateXを解除 */
+    padding-top: 42px; /*  */
+    padding-bottom: 22px; /*  */
+  }
+
+  .main__area__top{
+    text-align: center; /* テキストを中央に揃える */
+    padding: 0 10.4vw 0 10.67vw;
+  }
+
+  .main-sub-1,
+  .main-sub-2{
+    font-size: 3.5vw;
+    letter-spacing: 0.25vw;
+  }
+
+  .main-sub-2{
+    line-height: 6.5vw;
+    }
+
+  .caresend-1 {
+    letter-spacing:0.2vw ; /*  */
+  }
+
+  .main__area__top :nth-of-type(3) {
+    line-height: 6.5vw;
+  }
+
+  .area__circle{
+    display: flex; /* フレックスボックスで配置 */
+    column-gap: 5px; /*  */
+    justify-content: center; /* 要素を中央に配置 */
+    padding: 16px 0 14px 0px;
+  }
+
+  .circle__entry{
+    margin: 0 auto;
+    gap: 10px;
+    width: 29.5vw; /* % */
+    height: 29.5vw;
+    border-radius: 50%;
+  }
+
+  .circle__title{
+    font-size: 4.2vw;
+    }
+
+  .circle__main{
+    font-size: 4.8vw;
+    display: inline-block;
+    vertical-align: top;
+    }
+
+  .circle__main .medium{
+    font-size: 4.5vw;
+  }
+
+  .circle__main .small{
+    margin: 0;
+    font-size: 3.25vw;
+  }
+
+  .circle__entry:nth-of-type(3) .circle__main .small{
+    position: static;
+  }
+
+  .main__area__note{
+    line-height: clamp(10px, 5.2vw, 30px);
+    }
+
+  .main__area__note .note1, .note2{
+    font-size: clamp(10px, 3.2vw, 18px); /*  */
+  }
+
+  .main__area__note .caresend-1{
+    font-size: clamp(10px, 3.2vw, 18px); /*  */
+  }
+
+  .main__inner img {
+    display: flex;
+    max-width: 96vw;
+    position: static; /* 絶対位置を解除 */
+    margin: 0 auto;
+    margin-top: -16px; /* 左右のマージンを自動設定で中央揃え */
+    margin-left: -2vw;
+  }
+
+  /* ーーーー */
+  /* ダウンロードフォーム */
+  /* ーーーー */
+
+  form{
+    margin-top: 44px;
+    padding: 1.87VW;
+  }
+
+  .form__field{
+    padding: 0;
+  }
+
+  .form__title  {
+    font-size: clamp(10px, 4.27vw, 19px); /* 最小10px、最大19px、理想4vw */
+    justify-content: center;
+    
+  }
+
+  .main__entry label {
+    font-size: clamp(10px, 3.73vw, 24px); /* 最小10px、最大19px、理想4vw */
+    margin-top: 12px;
+  }
+
+  .main__entry .name__field > div:first-child {
+    margin-right: 1.2vw;
+  } 
+
+  .main__entry .name__field > div:last-child {
+   margin-left: 1.2vw;
+  }
+  .main__entry .privacy-note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 25px;
+  }
+
+  .main__entry button {
+    padding: 0;
+    margin: 40px auto 14px auto;
+    padding: 10px 27px;
+    width: auto; /* または適切な他の値に変更 */
+    
+    font-size: 16px; /* フォントサイズを16pxに設定 */
+  }
+
+  .achievement{
+    display: block; /* ブロック要素に設定 */
+  }
+
+  /* ーーーー */
+  /* achievement */
+  /* ーーーー */
+
+  .achievement__main{
+    display: block; /* ブロック要素に設定 */
+    padding-top: 36px; /*  */
+  }
+
+  .achievement__top{
+    font-size: clamp(10px, 5.3vw, 32px); /*  */
+    padding-bottom: 25px;
+  }
+
+  .achievement__image{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 39px;
+  }
+
+  .achievement__image img{
+    max-width: 280px; /* 画像の最大幅を280pxに設定 */
+    height: 100%; /* 高さを100%に設定 */
+  }
+
+  .achievement__other img {
+    max-width: 160px;
+    height: 100%;
+    animation: scroll 10s linear infinite;
+  }
+  
+
+
+  /* ーーーー */
+  /* about */
+  /* ーーーー */
+
+  .about__inner {
+    padding-top: 65px;
+  }
+
+  .about__top{
+    padding-bottom: 65px;
+  }
+
+  .about__text
+  {
+    font-size: clamp(10px, 5.2vw, 24px);
+    letter-spacing: 0.1vw;
+    line-height: clamp(10px, 9.5vw, 40px);
+    margin: 0 auto 59px; /* マージンを設定 */
+  }
+
+  .about__text p
+  {
+    font-size: clamp(10px, 5.2vw, 24px);
+    letter-spacing: 0.1vw;
+  }
+
+  .about__text span{
+    line-height: 13vw;
+    letter-spacing: 0.4vw;
+    font-size: clamp(10px, 6vw, 32px); /*  */
+  }
+
+  .about__image{
+    display: none; /* 非表示に設定 */
+  }
+
+  .about__image_sp{
+    display: block; /* 表示状態に設定 */
+  }
+
+  /* ーーーー */
+  /* feature */
+  /*CareSendの特徴 */
+  /* ーーーー */
+
+  .feature__top {
+    padding-bottom: 52px;
+  }
+
+  .feature__flex{
+    display: block; /* ブロック要素に設定 */
+  }
+
+  .index__flex__box {
+    margin: 0 auto;
+    max-width: 341px;
+    height: 100%;
+    padding: 13px 14px 22px 14px;
+    margin-bottom: 24px; /* 下に24pxのマージンを設定 */
+  }
+
+  .box__title {
+    line-height: clamp(10px, 7.8vw, 30px);
+  }
+
+  .box__text__index{
+    padding: 0 15px;
+    line-height: clamp(10px, 7.8vw, 30px);
+  }
+
+  /* ーーーー */
+  /* caregiver */
+  /*介護士の登録情報の閲覧 */
+  /* ーーーー */
+
+  .caregiver{
+    padding: 40px 27px 40px 28px; /* 全体にパディングを設定 */
+  }
+
+  .caregiver__title{
+    font-size: clamp(10px, 6vw, 24px); /* ビューポート幅の6%に基づいたフォントサイズに設定 */
+    line-height: 43.2px;
+    letter-spacing: 0.4vw;
+    padding: 0 0 38px 0; /*  */
+  }
+
+  /* ーーーー */
+  /* case */
+  /* ーーーー */
+
+  .case__inner{
+    padding:72px 0 24px 0;
+    max-height: 681px;
+  }
+
+  .case__top{
+    padding-bottom: 35px;
+  }
+
+  .splide__list{
+    max-width: 100%;
+  }
+
+  .splide__slide{
+    max-width: 311px;
+    max-height: 471px;
+    padding: 19px 10px 20px 9px;
+  }
+
+  .case__index__box:nth-child(odd),
+  .case__index__box:nth-child(even)  {
+    margin-right: 11vw;
+  }
+
+  /* フォントpx指定
+  vwだと900〜1000pxで大きすぎるため */
+
+  .box__top,
+  .box__top span{
+    font-size: 18px; 
+    line-height:32px;
+    letter-spacing: 0;
+  }
+
+  .box__text__case{
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 48px;
+  }
+
+  .controls button {
+    width: 6vw; 
+    height: 6vw;
+  }
+
+  .case__inner .splide__pagination {
+    display: none;
+  }
+
+  /* ーーーー */
+  /* commission */
+  /* ーーーー */
+
+  .commission__inner{
+    padding: 66px 30px 0 31px;
+  }
+
+  .commission__top  {
+    letter-spacing: -0.4px;
+    padding-bottom: 26px;
+  }
+
+  .commission__pattern {
+    max-width: 83.2vw;
+  }
+
+  .pattern__box{
+    padding: 3.47VW 0 19px 0;
+    max-height: 24.27VW;
+    display: flex; /* フレックスボックスで配置 */
+    justify-content: center; /* 子要素を中央に配置 */
+    align-items: center; /* 垂直方向の中央に揃える */
+    text-align: center; /* テキストを中央に揃える */
+    flex-direction: column; /* 子要素を縦方向に並べる */
+    border-top: 1.6vw solid #007FC6;
+  }
+
+  .pattern__box__top{
+    padding-bottom: 18px;
+    font-size: clamp(10px, 3vw, 24px); /*  */
+    line-height: 0; /* 行の高さを0に設定 */
+    letter-spacing: 0.2vw;
+  }
+
+  .pattern__box__text {
+    margin: 0 auto;
+  }
+
+  
+  .pattern__amount {
+    font-size: 9.6vw; /* ビューポート幅の10%に基づいたフォントサイズに設定 */
+  }
+  
+  .pattern__price {
+    font-size: 3vw; /* ビューポート幅の3%に基づいたフォントサイズに設定 */
+    margin-bottom: 3px;
+  }
+
+  .commission__text {
+    margin-top: 47px;
+  }
+
+  .commission__text li{
+    font-size: clamp(10px, 3vw, 14px); /*  */
+    line-height: clamp(10px, 5.86vw, 24px);
+    letter-spacing: 0.3vw;
+  }
+
+  /* ーーーー */
+  /* faq */
+  /* ーーーー */
+
+  .faq__inner{
+    padding: 83px 16px 72px 16px; /* 全体にパディングを設定 */
+  }
+
+  .faq__top{
+    padding-bottom: 43px;
+  }
+
+  .faq__box{
+    margin-bottom: 16px;
+  }
+
+  .faq__question{
+    height: 64px;
+    padding: 0 10px 0 10px;
+    }
+
+    .faq__answer{
+      padding: 10px;
+    }
+
+  .faq__answer,
+  .faq__answer li{
+    font-size: 14px;
+  }
+
+  .left-element{
+    gap: 10px;
+  }
+
+  /* カンプの整列ミスかもしれないが修正 */
+  .faq__box[data-faq-id="3"] .left-element,
+  .faq__box[data-faq-id="4"] .left-element,
+  .faq__box[data-faq-id="5"] .left-element {
+    gap: 14px;
+  }
+
+  .question__mark,
+  .question__mark._emergent{
+    font-size: clamp(10px, 4.27vw, 32px);
+    }
+
+  .question__text,
+  .question__text._emergent{
+    font-size:14px; /*  */
+    margin: 9px 0;
+  }
+
+  .question__btn span{
+    margin: 0; /* マージンをリセット */
+    width: 17px;
+  }
+
+  /* ーーーー */
+  /* download */
+  /* ーーーー */
+
+  .download__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 72px 16px 45px 16px; /* 全体にパディングを設定 */
+  }
+
+  .download__top{
+    padding: 0;
+    font-size: 24px;
+  }
+
+  .download__main__area{
+    display: flex;
+    flex-direction: column; /* 子要素を縦方向に並べる */
+    padding: 0;
+
+  }
+
+  .download__site{
+    margin: 0;
+    padding: 0;
+  }
+
+  .site__text,
+  .site__text .caresend-1{
+    font-size: 12px;
+    text-align: center;
+    margin: 26px 0 16px 0;
+  }
+
+  .site__image{
+    display: flex;
+    justify-content: center;
+    float: none;
+    margin-bottom: 40px;
+  }
+
+  .image1,.image2{
+    display: none;
+  }
+
+  .image3 {
+    display: block;
+  }
+
+  .download form{
+    margin: 0;
+  }
+
+  /* ーーーー */
+  /* フッター */
+  /* ーーーー */
+
+  .footer__symbol.logo {
+    margin-top: 24px;
+  }
+
+}
